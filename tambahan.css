@@ -1,0 +1,918 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --principal: #13aca2;
+    --secundario: #5eddc1;
+    --tercero: #ccc;
+    --titulo: #222;
+    --texto: #666;
+    --cards: #fff;
+    --skills: #13aca2;
+    --fondo: #eee;
+}
+.left { text-align: left;}
+.right { text-align: right;}
+.center { text-align: center;}
+.justify { text-align: justify;}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+ 
+}
+
+.container{
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto; 
+}
+
+
+.container h2{
+    width: 100%;
+    color: var(--cards);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 0 #000;
+    margin-bottom: 3.5rem;
+}
+
+.container-conocimientos h3, .container-service h3, .container-portafolio h3{
+    color: var(--cards);
+    font-size: 1rem;
+    font-weight: 700;
+}
+/* -- HEADER -- */
+
+.header{
+    background-image: url(./img/bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    min-height: 650px;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    
+}
+header .logo{
+    flex-basis: 30%;
+    position: relative;
+    
+}
+header .logo img{
+    width: 100%;
+    max-width: 200px;
+    
+}
+
+
+header .menu{
+    flex-basis: 70%;
+}
+
+header .menu ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: flex-end;
+}
+header .menu ul li{
+    padding: 10px;
+}
+
+header .menu ul li a{
+    color: #fff;
+    font-size: .9rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+header .menu ul li a:hover{
+    color: #1d906c;
+}
+.header .contenedor-my-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 160px 0px;
+}
+.contenedor-my-name .my-name{
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 70px 150px;
+    background: rgba(0, 0, 0, 0.5)
+}
+.my-name p{
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.my-name span{
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+
+   
+/* -- ACERCA DE MI -- */ 
+
+.container-about-me{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    margin: 50px;
+}
+    .about-me-photo{
+        flex-basis: 40%;
+        align-self: center;
+        
+    }
+    .about-me-photo img{
+        padding: 10px 0px;
+        width: 100%;
+        max-width: 300px;
+        filter: grayscale(1);
+        border-radius: 25px;
+    }
+
+    .about-me{
+        padding: 40px;
+        flex-basis: 60%;
+        align-self: center;
+    }
+    .about-me p{
+        line-height: 1.6rem;
+        text-align: justify;
+        color: var(--texto);
+    }
+
+
+
+
+
+
+/* -- EDUCACION --*/
+
+
+.educacion .timeline{
+    position: relative;
+    
+}
+
+.educacion .timeline:before{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    content: " ";
+    width: 10px;
+    height: auto;
+    background: var(--skills);
+
+}
+
+.educacion .timeline > li{
+    list-style: none;
+    position: relative;
+}
+
+.timeline > li:before, .timeline > li:after{
+    content: " ";
+    display: table;
+}
+.timeline > li:after{
+    clear: both;
+}
+.educacion .box-left{
+    margin-bottom: 20px;
+    width: 45%;
+    float: left;
+}
+.educacion .box-right{
+    margin-bottom: 20px;
+    width: 45%;
+    float: right;
+    
+}
+
+.timeline li .box-left .check{
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+    text-align: center;
+    position: absolute;
+    top: 16px;
+    left: 112%;
+    margin-left: -25px;
+    background-color: var(--secundario);
+    z-index: 100;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.timeline li .box-right .check{
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+    text-align: center;
+    position: absolute;
+    top: 16px;
+    left: -10%;
+    margin-left: -25px;
+    background-color: var(--secundario);
+    z-index: 100;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+
+.educacion .box-left, .educacion .box-right{
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 5px solid var(--skills);
+}
+li .box-left:before{
+    position: absolute;
+    top: 26px;
+    right: -15px;
+    display: inline-block;
+    border-top: 15px solid transparent;
+    border-left: 15px solid #fff;
+    border-right: 0 solid #ccc;
+    border-bottom: 15px solid transparent;
+    content: " ";
+}
+
+li .box-right:before{
+    position: absolute;
+    top: 26px;
+    left: -15px;
+    display: inline-block;
+    border-top: 15px solid transparent;
+    border-left: 0 solid #ccc;
+    border-right: 15px solid #fff;
+    border-bottom: 15px solid transparent;
+    content: " ";
+}
+
+li .box-left img, li .box-right img{
+    display: inline-block;
+    width: 100%;
+    max-width: 200px;
+    filter: grayscale(1);   
+}
+
+li .box-left img:hover, li .box-right img:hover{
+    filter: grayscale(0);
+}
+
+li .box-left span, li .box-right span{
+    display: block;
+    color: #1d906c;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+li .box-left h4, li .box-right h4{
+    color: #1d906c;
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+li .box-left p, li .box-right p{
+    margin-bottom: 20px;
+    text-align: justify;
+    color: var(--texto);
+    line-height: 1.4rem;
+}
+
+
+
+/* -- CONOCIMIENTOS -- */
+.conocimientos{
+    padding-top: 50px !important ;
+}
+.container-conocimientos{
+    margin-bottom: 120px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.container-conocimiento{
+    padding: 40px;
+    margin: 15px 20px;
+    flex-basis: 45%;
+    text-align: center;
+}
+.container-conocimiento .progress-bar{
+    background: var(--fondo);
+    height: 1.3rem;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 1rem;
+    
+
+    
+}
+    .progress-bar .progress{
+        background: var(--skills);
+        height: 100%; 
+        padding-top: 1px;
+        
+    }
+
+
+
+
+/* -- SERVICES -- */
+.services, .conocimientos, .portafolio, .acerca-de-mi, .educacion{
+    position: relative;
+    padding-top: 110px;
+    padding-bottom: 110px; 
+}
+.services .fondo{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 108%;
+    background: url(./img/fondo-services.svg),radial-gradient(circle at 1% 1%,#5eddc1,#13aca2);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transform: skewY(-10deg);
+    z-index: -1;
+}
+
+.container-services{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container-service{
+    background: #fff;
+    text-align: center;
+    width: 31%;
+    padding: 50px 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.container-service img{
+    display: inline-block;
+    width: 100%;
+    max-width: 120px;
+}
+
+.container-service p{
+    margin-top: 20px;
+    color: var(--texto);
+    font-size: .9rem;
+    line-height: 1.6rem;
+    text-align: justify;
+}
+
+
+/* -- PORTAFOLIO -- */
+.portafolio{
+    margin-top: 200px;
+      
+    
+}
+.portafolio .box{
+    position: absolute;
+    top: 190px;
+    
+    
+    left: -30px;
+    content: '';
+    width: 30%;
+    height: 50%;
+    border: 25px solid #17c39e;
+    z-index: -2;
+}
+
+/*.portafolio .box-right{
+    position: absolute;
+    
+    right: 0;
+    bottom: -30px;
+    
+    content: '';
+    width: 30%;
+    height: 55%;
+    border: 25px solid #17c39e;
+    z-index: -3;
+}*/
+
+.container-portafolios{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+    .container-portafolio{
+        background-color: #27272b;
+        text-align: center;
+        padding: 1.5rem;
+        flex-basis: 30%;
+        margin-top: 2.2rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .container-portafolio img{
+        width: 300px;
+        margin-bottom: 1rem;
+    }
+
+/* -- FOOTER -- */
+
+.footer{
+    background-color: #27272b;
+}
+
+.footer .container-footer{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.container-footer .logo-footer img{
+    width: 100%;
+}
+.container-footer .links h4,.container-footer .sociales h4{
+    color: #1d906c;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.container-footer .links a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    line-height: 2rem;
+    text-transform: uppercase;
+}
+.container-footer .links a:hover{
+    color: #1d906c;
+}
+.container-footer .sociales a{
+    margin: 7px;
+    display: inline-block;
+}
+.container-footer .sociales a:hover img{
+    width: 35px;
+}
+
+.container-footer .copyright{
+    flex-basis: 100%;
+    margin-top: 50px;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.container-footer .copyright p{
+    color: #fff;
+    font-size: 15px;
+}
+.container-footer .copyright span{
+    color: #1d906c;
+    font-weight: bold;
+}
+
+
+
+
+/*-- Tablets & IPADS --*/
+@media (min-width: 777px) and (max-width: 1024px) {
+
+     /* -- HEADER -- */
+header{
+    justify-content: center;
+   
+}
+header .logo{
+    flex-basis: auto;
+    margin-top: 15px;
+}
+
+header .menu{
+    flex-basis: 100%;
+}
+
+header .menu ul{
+    justify-content: center;
+}
+
+.header .contenedor-my-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 130px 0px;
+}
+.contenedor-my-name .my-name{
+    padding: 60px 125px;
+}
+.my-name p{
+    font-size: 2.8rem;
+}
+.my-name span{
+    font-size: 1.5rem;
+}
+
+/* -- ACERCA DE MI -- */ 
+
+.container-about-me{
+    justify-content: center;
+}
+    .about-me-photo{
+        flex-basis: auto;
+        
+    }
+    .about-me{
+        padding: 40px;
+        flex-basis: 100%;
+        align-self: center;
+    }
+    .about-me h2{
+        font-size: 1.9rem;
+    }
+
+
+}
+
+
+/*-- Tables and Mobiles --*/
+@media (min-width: 491px) and (max-width: 776px) {
+
+    /* -- HEADER -- */
+header{
+    justify-content: center;
+   
+}
+header .logo{
+    flex-basis: auto;
+    margin-top: 20px;
+}
+
+header .menu{
+    flex-basis: 100%;
+}
+
+header .menu ul{
+    justify-content: center;
+}
+
+.header .contenedor-my-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0px;
+}
+.contenedor-my-name .my-name{
+    padding: 40px 60px;
+}
+.my-name p{
+    font-size: 2.3rem;
+}
+.my-name span{
+    font-size: 1.1rem;
+}
+
+/* -- ACERCA DE MI -- */ 
+
+.container-about-me{
+    justify-content: center;
+}
+    .about-me-photo{
+        flex-basis: auto;
+        
+    }
+    .about-me{
+        padding: 40px;
+        flex-basis: 100%;
+        align-self: center;
+    }
+    .about-me h2{
+        font-size: 1.8rem;
+    }
+    
+    /* -- CONOCIMIENTOS -- */
+.conocimientos h2{
+    margin-top: 90px !important ;
+}
+.container-conocimientos{
+    justify-content: center;
+}
+.container-conocimiento{
+    padding: 40px;
+    margin: 15px 20px;
+    flex-basis: 100%;
+    text-align: left;
+}
+
+
+/* -- SERVICES -- */
+.container-services{
+    justify-content: space-around;
+}
+
+.container-service{
+    width: 45%;
+    padding: 50px 25px;
+}
+.container-service:nth-child(3){
+    margin-top: 25px;
+}
+
+/* -- PORTAFOLIO -- */
+.portafolio{
+    margin-top: 200px;
+      
+    
+}
+.portafolio .box{
+    position: absolute;
+    top: 190px;
+    
+    
+    left: -30px;
+    content: '';
+    width: 30%;
+    height: 50%;
+    border: 25px solid #17c39e;
+    z-index: -2;
+}
+
+
+.container-portafolios{
+    flex-direction: column;
+    justify-content: center;
+}
+    .container-portafolio{
+        padding: 2rem;
+        flex-basis: auto;
+    }
+    .container-portafolio img{
+        width: 400px;
+        
+    }
+
+   /* -- EDUCACION --*/
+
+.educacion .timeline:before{
+    left: 0;
+    width: 15px;
+}
+
+.educacion .box-left, .educacion .box-right{
+    margin-bottom: 20px;
+    width: 92%;
+    float: right;
+}
+
+
+.timeline li .box-right .check, .timeline li .box-left .check{
+    display: none;
+}
+
+li .box-left:before{
+    right: auto;
+    border-top: 15px solid transparent;
+    border-left: 0px solid #ccc;
+    border-right: 15px solid #fff;
+    border-bottom: 15px solid transparent;
+} 
+
+
+li .box-left img, li .box-right img{
+    filter: grayscale(0);   
+}
+
+}
+
+/* -- Mobile -- */
+@media (min-width: 320px) and (max-width: 490px) {
+
+    .container h2{
+        width: 100%;
+        color: var(--cards);
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2rem;
+        text-shadow: 2px 2px 0 #000;
+        margin-bottom: 3rem;
+    }
+    
+    .container-conocimientos h3, .container-service h3, .container-portafolio h3{
+        color: var(--cards);
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    header{
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;  
+    }
+
+    header .logo{
+        flex-basis: 100%;
+    }
+
+    header .menu{
+        flex-basis: 100%;
+    }
+
+    header .menu ul{
+        justify-content: center;
+    }
+    
+    header .menu ul li a{
+        color: rgba(255, 255, 255, 0.7);
+        font-size: .9rem;
+    }
+    
+    .header .contenedor-my-name{
+        width: 100%;
+        margin: 50px 0px;
+    }
+    .contenedor-my-name .my-name{
+        padding: 20px 50px;
+        background: rgba(0, 0, 0, 0.5)
+    }
+    .my-name p{
+        font-size: 1.7rem;
+    }
+    .my-name span{
+        font-size: 1.1rem;
+    }
+
+
+    /*-- ACERCA DE MI --*/
+    
+    .about-me-photo{
+        flex-basis: 100%;
+        align-self: center;
+        
+    }
+    .about-me-photo img{
+        width: 100%;
+        filter: grayscale(1);
+        border-radius: 0px;
+        
+    }
+
+    .about-me{
+        padding: 0px;
+        flex-basis: 100%;
+    }
+    .about-me p{
+        line-height: 1.5rem;
+        font-size: .8rem;
+    }
+
+    /* -- EDUCACION --*/
+
+    .educacion .timeline:before{
+        left: 0;
+        width: 15px;
+    }
+
+    .educacion .box-left, .educacion .box-right{
+        width: 85%;
+        float: right;
+    }
+
+    .box-left .check, .box-right .check{
+        display: none;
+    }
+
+li .box-left:before,{
+    right: 15px;
+    border-left: 0 solid #ccc;
+    border-right: 15px solid #fff;
+   
+}
+
+li .box-right:before,{
+    left: -15px;
+    border-left: 0 solid #ccc;
+    border-right: 15px solid #fff;
+}
+
+li .box-left img, li .box-right img{
+    max-width: 120px;
+    filter: grayscale(0);   
+}
+
+li .box-left h4, li .box-right h4{
+    font-size: .9rem;
+}
+li .box-left p, li .box-right p{
+    font-size: .8rem;
+}
+
+
+
+
+
+    /* -- CONOCIMIENTOS -- */
+    .container-conocimiento{
+        flex-basis: 100%; 
+        padding: 20px;
+        margin: 5px 0px;
+        text-align: left;
+    }
+
+    .container-conocimiento .progress-bar{
+        margin-top: .5rem;
+        
+    }
+    
+
+    /* -- SERVICES -- */
+    .services, .conocimientos, .portafolio, .acerca-de-mi, .educacion{
+        padding-top: 100px;
+        padding-bottom: 100px; 
+    }
+
+    .container-service{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* -- PORTAFOLIO -- */
+    .portafolio{
+        margin-top: 150px; 
+    }
+
+    .portafolio .box{
+        display: none;
+    }
+
+    .container-portafolio{
+        padding: 1rem;
+        flex-basis: 100%;        
+    }
+    .container-portafolio img{
+        width: 100%;
+    }
+
+
+    /* -- FOOTER -- */
+
+    .container-footer .logo-footer img{
+        width: 100%;
+    }
+
+    .container-footer .links{
+        margin-top: 15px;
+    }
+    .container-footer .sociales{
+        margin-top: 40px;
+        
+    }
+
+    .container-footer .copyright{
+        margin-top: 10px;
+    }
+
+    .container-footer .copyright p{
+        font-size: 12px;
+    }
+
+}
